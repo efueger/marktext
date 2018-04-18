@@ -35,7 +35,7 @@ export const blockContainerElementNames = [
   'figcaption', 'footer', 'form', 'header', 'hgroup', 'main', 'nav',
   'noscript', 'output', 'section', 'video',
   'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td'
-]
+]}
 
 export const emptyElementNames = ['br', 'col', 'colgroup', 'hr', 'img', 'input', 'source', 'wbr']
 
@@ -48,7 +48,7 @@ export const EVENT_KEYS = generateKeyHash([
   'ArrowLeft',
   'ArrowRight',
   'Tab'
-])
+]
 
 export const LOWERCASE_TAGS = generateKeyHash([
   ...blockContainerElementNames, ...emptyElementNames, 'div'
