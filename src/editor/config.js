@@ -23,6 +23,43 @@ export const BLOCK_TYPE7 = htmlTags.filter(tag => {
   return !BLOCK_TYPE1.find(t => t === tag) && !BLOCK_TYPE6.find(t => t === tag)
 }
 
+                                           export const VOID_HTML_TAGS = voidHtmlTags
+export const HTML_TAGS = htmlTags
+// TYPE1 ~ TYPE7 according to https://github.github.com/gfm/#html-blocks
+export const BLOCK_TYPE1 = [
+  'script', 'pre', 'style'
+]
+                                           
+export const IMAGE_EXT_REG = /\.(jpeg|jpg|png|gif|svg|webp)(?=\?|$)/i,
+
+export const PARAGRAPH_TYPES = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'li', 'figure']
+
+
+import { generateKeyHash, genUpper2LowerKeyHash, getIdWithoutSet } from './utils'
+import htmlTags from 'html-tags'
+import voidHtmlTags from 'html-tags/void'
+
+export const VOID_HTML_TAGS = voidHtmlTags
+export const HTML_TAGS = htmlTags
+// TYPE1 ~ TYPE7 according to https://github.github.com/gfm/#html-blocks
+export const BLOCK_TYPE1 = [
+  'script', 'pre', 'style'
+]
+
+export const BLOCK_TYPE2_REG = /^<!--(?=\s).*\s+-->$/
+
+export const BLOCK_TYPE6 = [
+  'address', 'article', 'aside', 'base', 'basefont', 'blockquote', 'body', 'caption', 'center', 'col', 'colgroup', 'dd',
+  'details', 'dialog', 'dir', 'div', 'dl', 'dt', 'fieldset', 'figcaption', 'figure', 'footer', 'form', 'frame', 'frameset',
+  'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'head', 'header', 'hr', 'html', 'iframe', 'legend', 'li', 'link', 'main', 'menu',
+  'menuitem', 'meta', 'nav', 'noframes', 'ol', 'optgroup', 'option', 'p', 'param', 'section', 'source', 'summary', 'table',
+  'tbody', 'td', 'tfoot', 'th', 'thead', 'title', 'tr', 'track', 'ul'
+]
+
+export const BLOCK_TYPE7 = htmlTags.filter(tag => {
+  return !BLOCK_TYPE1.find(t => t === tag) && !BLOCK_TYPE6.find(t => t === tag)
+}
+
 export const IMAGE_EXT_REG = /\.(jpeg|jpg|png|gif|svg|webp)(?=\?|$)/i,
 
 export const PARAGRAPH_TYPES = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'li', 'figure']
