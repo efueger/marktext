@@ -23,6 +23,13 @@ export const BLOCK_TYPE7 = htmlTags.filter(tag => {
   return !BLOCK_TYPE1.find(t => t === tag) && !BLOCK_TYPE6.find(t => t === tag)
 }
 
+                                           export const VOID_HTML_TAGS = voidHtmlTags
+export const HTML_TAGS = htmlTags
+// TYPE1 ~ TYPE7 according to https://github.github.com/gfm/#html-blocks
+export const BLOCK_TYPE1 = [
+  'script', 'pre', 'style'
+]
+                                           
 export const IMAGE_EXT_REG = /\.(jpeg|jpg|png|gif|svg|webp)(?=\?|$)/i,
 
 export const PARAGRAPH_TYPES = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'li', 'figure']
@@ -196,3 +203,18 @@ export const HTML_TOOLS = [{
   label: 'delete',
   icon: 'icon-del'
 }]
+
+
+export const codeMirrorConfig = {
+  // theme: 'railscasts',
+  lineWrapping: true,
+  autoCloseBrackets: true,
+  lineWiseCopyCut: false,
+  autoCloseTags: true,
+  autofocus: true,
+  tabSize: 2,
+  extraKeys: {
+    'Cmd-Z': false,
+    'Cmd-Y': false
+  
+}
