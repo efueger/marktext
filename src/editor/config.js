@@ -109,7 +109,7 @@ export const CLASS_OR_ID = genUpper2LowerKeyHash([
   'AG_TIGHT_LIST_ITEM',
   'AG_HTML_TAG',
   'AG_A_LINK'
-])
+]
 
 export const codeMirrorConfig = {
   // theme: 'railscasts',
@@ -122,7 +122,7 @@ export const codeMirrorConfig = {
   extraKeys: {
     'Cmd-Z': false,
     'Cmd-Y': false
-  }
+  
 }
 
 export const DAED_REMOVE_SELECTOR = new Set([
