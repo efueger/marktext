@@ -23,6 +23,13 @@ export const BLOCK_TYPE7 = htmlTags.filter(tag => {
   return !BLOCK_TYPE1.find(t => t === tag) && !BLOCK_TYPE6.find(t => t === tag)
 }
 
+                                           export const VOID_HTML_TAGS = voidHtmlTags
+export const HTML_TAGS = htmlTags
+// TYPE1 ~ TYPE7 according to https://github.github.com/gfm/#html-blocks
+export const BLOCK_TYPE1 = [
+  'script', 'pre', 'style'
+]
+                                           
 export const IMAGE_EXT_REG = /\.(jpeg|jpg|png|gif|svg|webp)(?=\?|$)/i,
 
 export const PARAGRAPH_TYPES = ['p', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'blockquote', 'pre', 'ul', 'ol', 'li', 'figure']
@@ -35,7 +42,7 @@ export const blockContainerElementNames = [
   'figcaption', 'footer', 'form', 'header', 'hgroup', 'main', 'nav',
   'noscript', 'output', 'section', 'video',
   'table', 'thead', 'tbody', 'tfoot', 'tr', 'th', 'td'
-]
+]}
 
 export const emptyElementNames = ['br', 'col', 'colgroup', 'hr', 'img', 'input', 'source', 'wbr']
 
@@ -48,7 +55,7 @@ export const EVENT_KEYS = generateKeyHash([
   'ArrowLeft',
   'ArrowRight',
   'Tab'
-])
+]
 
 export const LOWERCASE_TAGS = generateKeyHash([
   ...blockContainerElementNames, ...emptyElementNames, 'div'
@@ -109,7 +116,7 @@ export const CLASS_OR_ID = genUpper2LowerKeyHash([
   'AG_TIGHT_LIST_ITEM',
   'AG_HTML_TAG',
   'AG_A_LINK'
-])
+]
 
 export const codeMirrorConfig = {
   // theme: 'railscasts',
@@ -122,7 +129,7 @@ export const codeMirrorConfig = {
   extraKeys: {
     'Cmd-Z': false,
     'Cmd-Y': false
-  }
+  
 }
 
 export const DAED_REMOVE_SELECTOR = new Set([
@@ -196,3 +203,18 @@ export const HTML_TOOLS = [{
   label: 'delete',
   icon: 'icon-del'
 }]
+
+
+export const codeMirrorConfig = {
+  // theme: 'railscasts',
+  lineWrapping: true,
+  autoCloseBrackets: true,
+  lineWiseCopyCut: false,
+  autoCloseTags: true,
+  autofocus: true,
+  tabSize: 2,
+  extraKeys: {
+    'Cmd-Z': false,
+    'Cmd-Y': false
+  
+}
